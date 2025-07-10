@@ -20,7 +20,7 @@ app.use('/api/favorites', favoriteRoutes);
 app.use('/api/auth', authRoutes);
 
 // MongoDB bağlantısı
-mongoose.connect('mongodb://localhost:27017/aeteknoloji', {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
